@@ -23,8 +23,5 @@ X, Y = gaussian_quantiles
 print(X.shape)
 print(Y.shape)
 
-plt.scatter(X[:,0],X[:,1],C = Y[:], S = 40, cmap = plt.cm.Spectral)
+plt.scatter(X[:, 0], X[:, 1], c=Y, s=40, cmap=plt.cm.viridis) 
 plt.show()
-
-
-
