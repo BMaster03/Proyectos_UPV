@@ -26,7 +26,7 @@ print(y.shape)
 plt.scatter(x[:, 0], x[:, 1], c=y, s=40, cmap=plt.cm.viridis) 
 plt.show()
 
-def Sigmoid(X, derivate = False): #me return of derivative of fuction sigmoid
+def Sigmoid(X, derivate = False): # me return of derivative of fuction sigmoid
     if derivate:
         return np.exp(-x)/(np.exp(-x)+1) ** 2
     else:
