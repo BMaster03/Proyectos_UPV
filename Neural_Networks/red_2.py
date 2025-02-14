@@ -18,10 +18,38 @@ gaussian_quantiles = make_gaussian_quantiles(
     random_state = None
 )
 
-X, Y = gaussian_quantiles
+x, y = gaussian_quantiles
 
-print(X.shape)
-print(Y.shape)
+print(x.shape)
+print(y.shape)
 
-plt.scatter(X[:, 0], X[:, 1], c=Y, s=40, cmap=plt.cm.viridis) 
+plt.scatter(x[:, 0], x[:, 1], c=y, s=40, cmap=plt.cm.viridis) 
 plt.show()
+
+def Sigmoid(X, derivate = False): #me return of derivative of fuction sigmoid
+    if derivate:
+        return np.exp(-x)/(np.exp(-x)+1) ** 2
+    else:
+        return 1/(1 + np.exp(-x))
+    
+def Relu(x, derivative = False):
+    if derivative:
+        x [x <= x] = 0
+        x [x > 0 ] = 1
+        return x
+    else:
+        return np.maximum(0,x)
+
+# Loss of Fuction 
+
+def Mse(y,y_hat, derivative = False):
+    if derivative:
+        return (y_hat - y)
+    else:
+        return np.mean((y_hat - y)) ** 2
+
+
+
+
+
+    
