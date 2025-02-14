@@ -2,7 +2,7 @@
 #from statistics import covariance
 import numpy as np 
 import matplotlib.pyplot as plt 
-from sklearn.datasets import make_gaussian_quantiles #type: ignore
+from sklearn.datasets import make_gaussian_quantiles 
 
 #Create datasets from zero - For in example of clasification 
 
